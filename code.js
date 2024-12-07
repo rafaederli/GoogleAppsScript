@@ -1,17 +1,10 @@
-function doGet() {
-    return HtmlService.createHtmlOutputFromFile("form.html")
-        .setWidth(400)
-        .setHeight(600);
-}
-
-function salvarDadosNaPlanilha(dados) {
-    const planilha = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
-    planilha.appendRow([
-        dados.nome,
-        dados.dataEntrada,
-        dados.tipo,
-        dados.status,
-        dados.valor,
-        dados.vencimento
-    ]);
-}
+function doGet(e) {
+  
+    Logger.log(e)
+    return HtmlService.createHtmlOutputFromFile("page");
+  }
+  
+  
+  function userClicked(name) {
+    Logger.log(name + " clicked the Button");
+  }
