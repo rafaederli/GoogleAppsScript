@@ -1,25 +1,34 @@
 <!DOCTYPE html>
 <html>
-
   <head>
     <base target="_top">
+    <?!= include("page-css"); ?>
   </head>
-  
   <body>
+
     <h1>Hello</h1>
-    
-    <label>Name:</label><input type="text" id="username">
-    
-    <button id="btn">Run It!</button>
-    
-    <script>
-      document.getElementById("btn").addEventListener("click", doStuff);
-      function doStuff() {
-        var uname = document.getElementById("username").value;
-        google.script.run.userClicked(uname);
-        document.getElementById("username").value = "";
-      }
-    </script>
+
+    <div class="form-row">
+      <label>First Name</label><input type="text" id="fn">
+    </div>
+
+    <div class="form-row">
+      <label>Last Name</label><input type="text" id="ln">
+    </div>
+
+    <div class="form-row">
+      <label>Application:</label>
+      <select id="app">
+        <option>Google Sheets</option>
+        <option>Excel</option>
+        <option>Number s</option>
+        <option>Other</option>
+      </select>
+    </div>
+
+    <div class="form-row">
+      <button id="btn">Run It!</button>
+    </div>
+    <?!= include("page-js"); ?>
   </body>
-  
 </html>
