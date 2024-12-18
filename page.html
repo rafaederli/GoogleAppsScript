@@ -23,10 +23,9 @@
         <div class="input-field col s6">
           <select id="app">
             <option disabled selected>Choose your app</option>
-            <option>Google Sheets</option>
-            <option>Excel</option>
-            <option>Numbers</option>
-            <option>Other</option>
+            <? for(var i=0; i<list.length; i++) { ?>
+            <option><?= list[i]; ?></option>
+            <? } ?>
           </select>
           <label>Application</label>
         </div>
